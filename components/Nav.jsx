@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
@@ -13,6 +15,7 @@ const Nav = () => {
           width={30}
           height={30}
         />
+        <p class="logo_text">Promptopia</p>
       </Link>
     </nav>
   );
