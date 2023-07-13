@@ -29,7 +29,7 @@ const Nav = () => {
         <p class="logo_text">Promptopia</p>
       </Link>
 
-      {/*Mobile Navigation*/}
+      {/*Desktop Navigation*/}
       <div className="sm:flex hidden">
         {isUserLoggedIn ? (
           <div className="flex gap-3 md:gap-5">
