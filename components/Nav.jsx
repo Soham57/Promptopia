@@ -4,12 +4,11 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { signIn, signOut, useSession, getProviders } from "next-auth/react";
-import { serialize } from "mongodb";
 
 const Nav = () => {
   const isUserLoggedIn = true;
   const [providers, setProviders] = useState(null);
-  const [toogleDropdown, setToggleDropdown] = useState(second);
+  const [toogleDropdown, setToggleDropdown] = useState(false);
   useEffect(() => {
     const setProviders = async () => {
       const response = await getProviders();
