@@ -25,7 +25,7 @@ const Nav = () => {
           width={30}
           height={30}
         />
-        <p class="logo_text">Promptopia</p>
+        <p className="logo_text">Promptopia</p>
       </Link>
 
       {/*Desktop Navigation*/}
