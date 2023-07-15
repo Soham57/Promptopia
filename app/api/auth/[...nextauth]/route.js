@@ -13,7 +13,12 @@ const handler = NextAuth({
   async signIn({ profile }) {
     try {
       await connectToDB();
-    } catch (error) {}
+      //Check if user already exists
+      //if not create a new user
+      return true;
+    } catch (error) {
+      return false;
+    }
   },
 });
 export { handler as GET, handler as POST };
