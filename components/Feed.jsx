@@ -4,9 +4,20 @@ import { useState, useEffect } from "react";
 
 import PromptCard from "./PromptCard";
 
+const PromptCardList = ({ data, handleTagClick }) => {};
+
 const Feed = () => {
   const [searchText, setSearchText] = useState("");
   const handleSearchChange = (e) => {};
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      const response = await fetch("api/prompt");
+      const data = await response.json();
+      setPosts(data);
+    };
+    fetchPosts();
+  }, []);
 
   return (
     <section className="feed">
