@@ -1,7 +1,17 @@
-import React from "react";
+"use client";
 
-const Profile = () => {
-  return <div>Profile</div>;
+import { useEffect } from "react";
+import Profile from "@components/Profile";
+
+const MyProfile = () => {
+  useEffect(() => {
+    const fetchPosts = async () => {
+      const response = await fetch(`/api/users/${session?.user.id}/posts`);
+      const data = await response.json();
+      setPosts(data);
+    };
+    fetchPosts();
+  }, []);
 };
 
-export default Profile;
+export default MyProfile;
